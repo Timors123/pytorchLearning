@@ -155,6 +155,8 @@ def handleLabel(inputs):
     else:
         label_list.append(inputs[41])
         return find_index(inputs[41], label_list)[0]
+
+
 # 主函数
 if __name__ == "__main__":
     # 循环读取文件数据
@@ -175,6 +177,7 @@ if __name__ == "__main__":
             csv_writer.writerow(temp_line)
             count += 1
             # 输出每行数据中所修改后的状态
+    
             print(
                 count,
                 "status:",
