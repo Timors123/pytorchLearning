@@ -1,15 +1,14 @@
-# coding:utf-8
+# 数值化处理
 import numpy as np
-import pandas as pd
 import csv
 
 # label_list为全局变量
 global label_list
 # 文件名
 source_file = "kddcup.data_10_percent_corrected"
-handled_file = "kddcup.data_10_percent_corrected.csv"
+handled_file = "kddcup.data_10_percent_corrected.txt"
 # 文件写入操作
-data_file = open(handled_file, "w")
+data_file = open(handled_file, "w", newline="")
 
 
 # 将相应的非数字类型转换为数字标识即符号型数据转化为数值型数据
@@ -176,14 +175,12 @@ if __name__ == "__main__":
             temp_line[41] = handleLabel(row)
             csv_writer.writerow(temp_line)
             count += 1
-            # 输出每行数据中所修改后的状态
-    
-            print(
-                count,
-                "status:",
-                temp_line[1] + "(协议类型)",
-                temp_line[2] + "(服务类型)",
-                temp_line[3] + "(连接状态)",
-                temp_line[41] + "(攻击类型)",
-            )
-        data_file.close()
+            # # 输出每行数据中所修改后的状态
+            # print(
+            #     count,
+            #     "status:",
+            #     temp_line[1] + "(协议类型)",
+            #     temp_line[2] + "(服务类型)",
+            #     temp_line[3] + "(连接状态)",
+            #     temp_line[41] + "(攻击类型)",
+            # )
