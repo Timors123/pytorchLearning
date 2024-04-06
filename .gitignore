@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 kddcup.data_10_percent_corrected
 kddcup.data_10_percent_corrected.csv
+kddcup.data.numerization_corrected_normalizing.csv
+kddcup.data_10_percent_corrected.txt
